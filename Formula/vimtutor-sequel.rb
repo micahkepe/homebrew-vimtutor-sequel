@@ -1,8 +1,9 @@
 class VimtutorSequel < Formula
   desc "Vimtutor Sequel - Advanced Vim Tutor Lessons"
   homepage "https://github.com/micahkepe/vimtutor-sequel"
-  url "https://github.com/micahkepe/vimtutor-sequel/releases/download/v1.2.2/vimtutor-sequel-1.2.2.tar.gz"
-  sha256 "734971af622870ba629439ce0e19020df3480dff42d3e4750ac361db930cead1"
+  url "https://github.com/micahkepe/vimtutor-sequel/releases/download/v1.2.3/vimtutor-sequel-1.2.3.tar.gz"
+  sha256 "9e9f12d2be8eaf263c781c6bf7c8d06f72194576be5c5f5bed6fb9445f28a020"
+  version "1.2.3"
 
   def install
     bin.install "vimtutor-sequel.sh" => "vimtutor-sequel"
@@ -18,6 +19,6 @@ class VimtutorSequel < Formula
 
   test do
     assert_predicate testpath/"#{pkgshare}/vimtutor-sequel.txt", :exist?
-    system "#{bin}/vimtutor-sequel"
+    system "#{bin}/vimtutor-sequel", "--version" # vimtutor-sequel should return its version
   end
 end

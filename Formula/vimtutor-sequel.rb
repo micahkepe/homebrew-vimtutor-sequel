@@ -1,9 +1,9 @@
 class VimtutorSequel < Formula
   desc "Vimtutor Sequel - Advanced Vim Tutor Lessons"
   homepage "https://github.com/micahkepe/vimtutor-sequel"
-  url "https://github.com/micahkepe/vimtutor-sequel/releases/download/v1.3/vimtutor-sequel-1.3.tar.gz"
-  sha256 "29d7b73680a782f14ff2e6483aa8a3b2505619db5a1a3312f5fa6a2648df784f"
-  version "1.3"
+  url "https://github.com/micahkepe/vimtutor-sequel/releases/download/v1.3.1/vimtutor-sequel-1.3.1.tar.gz"
+  sha256 "190627358111d73170d4b1bc7a9823c511b44a71068a8c54207fdd116f4c2152"
+  version "1.3.1"
 
   def install
     bin.install "vimtutor-sequel.sh" => "vimtutor-sequel"

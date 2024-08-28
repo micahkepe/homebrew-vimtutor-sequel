@@ -5,6 +5,8 @@ class VimtutorSequel < Formula
   sha256 "190627358111d73170d4b1bc7a9823c511b44a71068a8c54207fdd116f4c2152"
   license "MIT"
 
+  depends_on "vim"
+
   def install
     bin.install "vimtutor-sequel.sh" => "vimtutor-sequel"
     pkgshare.install "vimtutor-sequel.txt"
@@ -12,7 +14,8 @@ class VimtutorSequel < Formula
   end
 
   test do
-    assert_predicate testpath/"#{pkgshare}/vimtutor-sequel.txt", :exist?
-    system bin/"vimtutor-sequel", "--version" # vimtutor-sequel should return its version
+    assert_predicate pkgshare/"vimtutor-sequel.txt", :exist?
+    assert_predicate pkgshare/"vimtutor-sequel.vimrc", :exist?
+    assert_match "Vimtutor Sequel version #{version}", shell_output("#{bin}/vimtutor-sequel --version")
   end
 end

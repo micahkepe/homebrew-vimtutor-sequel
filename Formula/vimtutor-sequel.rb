@@ -11,12 +11,6 @@ class VimtutorSequel < Formula
     pkgshare.install "vimtutor-sequel.vimrc"
   end
 
-  def caveats
-    <<~EOS
-      To run vimtutor-sequel, simply type `vimtutor-sequel` in your terminal.
-    EOS
-  end
-
   test do
     assert_predicate testpath/"#{pkgshare}/vimtutor-sequel.txt", :exist?
     system bin/"vimtutor-sequel", "--version" # vimtutor-sequel should return its version

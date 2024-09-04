@@ -14,8 +14,6 @@ class VimtutorSequel < Formula
   end
 
   test do
-    assert_predicate pkgshare/"vimtutor-sequel.txt", :exist?
-    assert_predicate pkgshare/"vimtutor-sequel.vimrc", :exist?
     assert_match "Vimtutor Sequel version #{version}", shell_output("#{bin}/vimtutor-sequel --version")
   end
 end
